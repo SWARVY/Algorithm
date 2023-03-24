@@ -46,15 +46,15 @@ def main():
                 categories[directory]['nums'].append(problem_num)
                 categories[directory]['links'].append(link)
 
+    content += "## 📚 Baekjoon AutoPush Repository\n"
+    content += "| Num |  🟤&nbsp;Bronze | ⚪&nbsp;Silver | 🟡&nbsp;Gold |\n"
+    content += "| :-: | --------------- | -------------- | ------------ |\n"
+
     bronze_count = len(categories['Bronze']['nums'])
     silver_count = len(categories['Silver']['nums'])
     gold_count = len(categories['Gold']['nums'])
 
     max_count = max(bronze_count, silver_count, gold_count)
-
-    content += "## 📚 Baekjoon AutoPush Repository\n"
-    content += "| Num |  🟤&nbsp;Bronze ({}) | ⚪&nbsp;Silver ({}) | 🟡&nbsp;Gold ({}) |\n".format(bronze_count, silver_count, gold_count)
-    content += "| :-: | --------------- | -------------- | ------------ |\n"
 
     for i in range(max_count):
         bronze_num = categories['Bronze']['nums'][i] if i < bronze_count else ''
@@ -81,4 +81,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-Footer
