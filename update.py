@@ -2,7 +2,6 @@ import os
 from urllib import parse
 
 HEADER = """#
-# 백준, 프로그래머스 문제 풀이 목록
 """
 
 def main():
@@ -40,21 +39,24 @@ def main():
 
         for file in files:
             file_ext = os.path.splitext(file)[1]
-            if file_ext == ".js":
+            if file_ext in [".cc", ".c", ".java"]:
                 problem_num = category.split('_')[-1]
                 link = parse.quote(os.path.join(root, file))
                 categories[directory]['nums'].append(problem_num)
                 categories[directory]['links'].append(link)
 
-    content += "## 📚 Baekjoon AutoPush Repository\n"
-    content += "| Num |  🟤&nbsp;Bronze | ⚪&nbsp;Silver | 🟡&nbsp;Gold |\n"
-    content += "| :-: | --------------- | -------------- | ------------ |\n"
-
     bronze_count = len(categories['Bronze']['nums'])
     silver_count = len(categories['Silver']['nums'])
     gold_count = len(categories['Gold']['nums'])
 
+    sum_count = sum({bronze_count, silver_count, gold_count})
     max_count = max(bronze_count, silver_count, gold_count)
+
+    content += "## 📝 Solved Algorithm Problems by Backjoon Online Judge\n"
+    content += "\t- This repo is automatically managed using python & Github Action.\n"
+    content += "\t- This repo contains solved algorithm files written from {} sources.\n\n".format(sum_count)
+    content += "| Num | 🟤&nbsp;Bronze&nbsp;(Solved : {}) | ⚪&nbsp;Silver&nbsp;(Solved : {}) | 🟡&nbsp;Gold&nbsp;(Solved : {}) |\n".format(bronze_count, silver_count, gold_count)
+    content += "| :-: | :-------------: | :------------: | :----------: |\n"
 
     for i in range(max_count):
         bronze_num = categories['Bronze']['nums'][i] if i < bronze_count else ''
