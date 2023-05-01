@@ -1,21 +1,7 @@
 function solution(array) {
-    const numbers = new Set(array);
-    const results = [];
-    let maxArray = null;
-    let max = -1;
+    let numbers = new Map();
     
-    for (let number of numbers)
-        results.push({value: number, count: 0});
-    
-    array.forEach((number) => {
-        const idx = results.findIndex((obj) => obj.value === number);
-        results[idx].count += 1;
-    });
-    
-    max = Math.max(...results.map(obj => obj.count));
-    maxArray = results.filter((obj) => obj.count === max);
-    
-    if (maxArray.length > 1)
-        return -1;
-    return maxArray[0].value;
+    for (let number of array) numbers.set(number, (numbers.get(number) || 0) + 1);
+    numbers = [...numbers].sort((a, b) => b[1] - a[1]);
+    return numbers.length === 1 || numbers[0][1] - numbers[1][1] > 0 ? numbers[0][0] : -1;
 }
