@@ -7,59 +7,51 @@ def extract_number(text):
     match = re.search(r'\d+', text)
     return int(match.group()) if match else 0
 
-def generate_language_icons_table(icons_base_url):
-    """사용한 프로그래밍 언어의 아이콘만 포함된 테이블을 생성합니다."""
-    languages = {
-        "C": "c.svg",
-        "JavaScript": "js.svg",  # js.svg가 올바른 파일명임을 가정
+def generate_solution_links(solution_files, problem_url, icons_base_url):
+    """풀이 파일들에 대한 링크와 언어 아이콘을 생성합니다."""
+    extension_to_icon = {
+        ".c": "c.svg",
+        ".js": "js.svg",  # 파일명 확인 필요
     }
-    table_content = ["<table align='center'><tr>"]
-    for lang, icon_filename in languages.items():
-        icon_url = f"{icons_base_url}/{icon_filename}"
-        table_content.append(f"<td align='center'><img src='{icon_url}' alt='{lang}' title='{lang}' style='width: 30px; height: 30px;'/></td>")
-    table_content.append("</tr></table>")
-    return "".join(table_content)
+    solution_links = []
+    for f in solution_files:
+        icon_filename = extension_to_icon.get(f.suffix, None)  # 확장자에 해당하는 아이콘 파일 이름을 가져옵니다.
+        if icon_filename:  # 해당하는 아이콘 파일 이름이 있는 경우에만 링크 생성
+            icon_url = f"{icons_base_url}/{icon_filename}"
+            solution_link = f"<a href='{problem_url}/{f.name}' title='{f.suffix[1:]}'><img src='{icon_url}' alt='{f.suffix[1:]}' style='width: 20px; height: 20px;'/></a>"
+            solution_links.append(solution_link)
+    return ' '.join(solution_links)
 
-def generate_problems_table(platform_dir, levels, icons_base_url):
-    """문제 섹션과 해당하는 문제들을 테이블로 생성합니다."""
-    content = ["<table align='center'><tr>"]
-    # 등급별로 열 추가
-    for level_name in levels:
-        level_dir = platform_dir / level_name
-        if level_dir.exists():
-            tier_image_url = f"{icons_base_url}/tier_{level_name.lower()}.png"
-            content.append(f"<th><img src='{tier_image_url}' alt='{level_name}' style='vertical-align: middle; width: 40px; height: auto;'/> {level_name}</th>")
-        else:
-            content.append("<th>-</th>")  # 디렉토리가 없는 경우
-    content.append("</tr><tr>")
-    for level_name in levels:
-        level_dir = platform_dir / level_name
-        if level_dir.exists():
-            problem_dirs = sorted(level_dir.iterdir(), key=lambda x: extract_number(x.stem))
-            problem_links = ' '.join([f"<a href='https://github.com/SWARVY/Algorithm/tree/main/백준/{level_name}/{problem_dir.name}/README.md'>{problem_dir.name}</a>" for problem_dir in problem_dirs])
-            content.append(f"<td>{problem_links if problem_links else '-'}</td>")
-        else:
-            content.append("<td>-</td>")  # 디렉토리가 없는 경우
-    content.append("</tr></table>")
+def generate_problems_table(platform_dir, level_name, icons_base_url):
+    """각 등급별 문제를 테이블로 생성합니다."""
+    level_dir = platform_dir / level_name
+    content = ["<table align='center'><tr><th>문제 이름</th><th>풀이 링크</th></tr>"]
+    if level_dir.exists():
+        problem_dirs = sorted(level_dir.iterdir(), key=lambda x: extract_number(x.stem))
+        for problem_dir in problem_dirs:
+            if problem_dir.is_dir():
+                problem_name = ' '.join(problem_dir.name.split()[1:])  # 문제 이름
+                problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/백준/{level_name}/{problem_dir.name}"
+                solution_files = [f for f in problem_dir.iterdir() if f.is_file() and f.name != "README.md"]
+                solution_links = generate_solution_links(solution_files, problem_url, icons_base_url)
+                content.append(f"<tr><td>{problem_name}</td><td>{solution_links}</td></tr>")
+    else:
+        content.append("<tr><td colspan='2'>-</td></tr>")
+    content.append("</table>")
     return "".join(content)
 
 def generate_readme_content(root_dir):
     content = ["<div align='center'>\n\n## 사용한 프로그래밍 언어\n\n"]
     icons_base_url = "https://github.com/SWARVY/Algorithm/raw/main/icons"
 
-    # 사용한 언어 아이콘 생성
-    content.append(generate_language_icons_table(icons_base_url))
-    content.append("\n\n")
-
     # "백준" 문제 섹션 처리
     content.append("## 백준\n\n")
     platform_dir = root_dir / "백준"
     if platform_dir.exists():
-        # Bronze, Silver, Gold 한 테이블로 묶기
-        content.append(generate_problems_table(platform_dir, ["Bronze", "Silver", "Gold"], icons_base_url))
-        content.append("\n\n")
-        # Platinum, Diamond, Ruby 한 테이블로 묶기
-        content.append(generate_problems_table(platform_dir, ["Platinum", "Diamond", "Ruby"], icons_base_url))
+        for level_name in ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ruby"]:
+            content.append(f"### {level_name}\n")
+            content.append(generate_problems_table(platform_dir, level_name, icons_base_url))
+            content.append("\n")
     content.append("\n</div>\n")
 
     return "".join(content)
