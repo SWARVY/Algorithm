@@ -30,15 +30,16 @@ def generate_readme_content(root_dir):
             for level_name in levels:
                 level_dir = platform / level_name
                 if level_dir.is_dir():
-                    # 난이도별 티어 이미지 추가 및 크기 조정
+                    # 난이도별 티어 이미지 추가 및 크기 조정, 수직 중앙 정렬
                     tier_image_url = f"{icons_base_url}/tier_{level_name.lower()}.png"
-                    content.append(f"### <img src='{tier_image_url}' width='25' height='25'> {level_name}\n")
+                    content.append(f"### <img src='{tier_image_url}' width='25' height='25' align='middle'> {level_name}\n")
                     content.append("| 문제 | 문제 설명 | 풀이 |\n| --- | --- | --- |\n")
                     for problem_dir in sorted(level_dir.iterdir(), key=lambda x: x.name):
                         if problem_dir.is_dir():
                             problem_name = problem_dir.name
                             problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/{platform_name}/{level_name}/{problem_name}"
                             solution_files = [f.name for f in problem_dir.iterdir() if f.is_file() and f.name != "README.md"]
+                            # 모든 아이콘 링크를 한 줄에 표시
                             solution_links = f"[{language_icon_links(solution_files, icons_base_url)}]({problem_url})"
                             
                             readme_path = problem_dir / "README.md"
