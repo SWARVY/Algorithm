@@ -2,7 +2,6 @@
 ## 📝 Solved Algorithm Problems by Backjoon Online Judge
 	- This repo is automatically managed using python & Github Action.
 
-### 🟤 Bronze ⚪ Silver 🟡 Gold
 | Num | Bronze | Silver | Gold |
 | :-: | :-: | :-: | :-: |
 | 01 | [10757. 큰 수 A＋B](./%EB%B0%B1%EC%A4%80/Bronze/10757.%E2%80%85%ED%81%B0%E2%80%85%EC%88%98%E2%80%85A%EF%BC%8BB/%ED%81%B0%E2%80%85%EC%88%98%E2%80%85A%EF%BC%8BB.c) | [1002. 터렛](./%EB%B0%B1%EC%A4%80/Silver/1002.%E2%80%85%ED%84%B0%EB%A0%9B/%ED%84%B0%EB%A0%9B.c) | [10026. 적록색약](./%EB%B0%B1%EC%A4%80/Gold/10026.%E2%80%85%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD/%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD.js) |
@@ -81,8 +80,6 @@
 | 74 | - | [9020. 골드바흐의 추측](./%EB%B0%B1%EC%A4%80/Silver/9020.%E2%80%85%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%E2%80%85%EC%B6%94%EC%B8%A1/%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%E2%80%85%EC%B6%94%EC%B8%A1.c) | - |
 | 75 | - | [9095. 1， 2， 3 더하기](./%EB%B0%B1%EC%A4%80/Silver/9095.%E2%80%851%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0/1%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0.js) | - |
 | 76 | - | [9465. 스티커](./%EB%B0%B1%EC%A4%80/Silver/9465.%E2%80%85%EC%8A%A4%ED%8B%B0%EC%BB%A4/%EC%8A%A4%ED%8B%B0%EC%BB%A4.js) | - |
-
-### 🟢 Platinum 🔵 Diamond 🔴 Ruby
 | Num | Platinum | Diamond | Ruby |
 | :-: | :-: | :-: | :-: |
 | 01 | [3015. 오아시스 재결합](./%EB%B0%B1%EC%A4%80/Platinum/3015.%E2%80%85%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4%E2%80%85%EC%9E%AC%EA%B2%B0%ED%95%A9/%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4%E2%80%85%EC%9E%AC%EA%B2%B0%ED%95%A9.js) | - | - |
