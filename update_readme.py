@@ -11,15 +11,14 @@ def generate_readme_content(root_dir):
                 if level.is_dir():
                     level_name = level.name
                     content.append(f"### {level_name}\n")
+                    content.append("| 문제 | 풀이 |\n| --- | --- |\n")
                     for problem_dir in level.iterdir():
                         if problem_dir.is_dir():
                             problem_name = problem_dir.name
                             problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/{platform_name}/{level_name}/{problem_name}"
                             solution_files = [f.name for f in problem_dir.iterdir() if f.is_file()]
-                            content.append(f"- [{problem_name}]({problem_url})\n")
-                            content.append("  - Solutions:\n")
-                            for solution_file in solution_files:
-                                content.append(f"    - {solution_file}\n")
+                            solution_links = [f"[{solution_file}]({problem_url}/{solution_file})" for solution_file in solution_files]
+                            content.append(f"| [{problem_name}]({problem_url}) | {', '.join(solution_links)} |\n")
 
     return "".join(content)
 
