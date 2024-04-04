@@ -1,6 +1,27 @@
 import os
 from pathlib import Path
 
+def language_icon_links(filenames, base_url):
+    """파일명 목록에 따라 프로그래밍 언어 아이콘의 HTML 링크 목록을 반환합니다."""
+    extension_to_icon = {
+        ".c": "c.svg",
+        ".js": "javascript.svg",
+        ".py": "python.svg",
+        # 필요에 따라 더 많은 확장자와 아이콘 파일을 추가할 수 있습니다.
+    }
+    links = []
+    for filename in filenames:
+        _, extension = os.path.splitext(filename)
+        icon_filename = extension_to_icon.get(extension)
+        if icon_filename:
+            # GitHub 저장소의 이미지 파일 URL을 생성하고 HTML 이미지 태그로 반환합니다.
+            icon_url = f"{base_url}/{icon_filename}"
+            # 이미지 태그를 links 리스트에 추가합니다.
+            links.append(f'<img src="{icon_url}" alt="{extension}" style="width:20px; height:20px; display: inline-block;"/>')
+    # links 리스트의 아이템들을 공백으로 연결하여 반환합니다.
+    return ' '.join(links) if links else 'N/A'
+
+
 def generate_readme_content(root_dir):
     content = []
     icons_base_url = "https://github.com/SWARVY/Algorithm/raw/main/icons"  # 아이콘 이미지 파일들이 위치한 기본 URL
