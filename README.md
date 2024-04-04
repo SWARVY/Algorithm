@@ -1,14 +1,534 @@
-#
-# 백준, 프로그래머스 문제 풀이 목록
-## 📚 Baekjoon AutoPush Repository
-| Num |  🟤&nbsp;Bronze (0) | ⚪&nbsp;Silver (7) | 🟡&nbsp;Gold (9) |
-| :-: | --------------- | -------------- | ------------ |
-| 01 | []() | [10828. 스택](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/10828.%E2%80%85%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8.js) | [17298. 오큰수](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/17298.%E2%80%85%E1%84%8B%E1%85%A9%E1%84%8F%E1%85%B3%E1%86%AB%E1%84%89%E1%85%AE/%E1%84%8B%E1%85%A9%E1%84%8F%E1%85%B3%E1%86%AB%E1%84%89%E1%85%AE.js) |
-| 02 | []() | [10845. 큐](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/10845.%E2%80%85%E1%84%8F%E1%85%B2/%E1%84%8F%E1%85%B2.js) | [1915. 가장 큰 정사각형](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/1915.%E2%80%85%E1%84%80%E1%85%A1%E1%84%8C%E1%85%A1%E1%86%BC%E2%80%85%E1%84%8F%E1%85%B3%E1%86%AB%E2%80%85%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%89%E1%85%A1%E1%84%80%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A7%E1%86%BC/%E1%84%80%E1%85%A1%E1%84%8C%E1%85%A1%E1%86%BC%E2%80%85%E1%84%8F%E1%85%B3%E1%86%AB%E2%80%85%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%89%E1%85%A1%E1%84%80%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A7%E1%86%BC.js) |
-| 03 | []() | [11399. ATM](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/11399.%E2%80%85ATM/ATM.js) | [1918. 후위 표기식](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/1918.%E2%80%85%E1%84%92%E1%85%AE%E1%84%8B%E1%85%B1%E2%80%85%E1%84%91%E1%85%AD%E1%84%80%E1%85%B5%E1%84%89%E1%85%B5%E1%86%A8/%E1%84%92%E1%85%AE%E1%84%8B%E1%85%B1%E2%80%85%E1%84%91%E1%85%AD%E1%84%80%E1%85%B5%E1%84%89%E1%85%B5%E1%86%A8.js) |
-| 04 | []() | [15649. N과 M （1）](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/15649.%E2%80%85N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%881%EF%BC%89/N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%881%EF%BC%89.js) | [2170. 선 긋기](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/2170.%E2%80%85%E1%84%89%E1%85%A5%E1%86%AB%E2%80%85%E1%84%80%E1%85%B3%E1%86%BA%E1%84%80%E1%85%B5/%E1%84%89%E1%85%A5%E1%86%AB%E2%80%85%E1%84%80%E1%85%B3%E1%86%BA%E1%84%80%E1%85%B5.js) |
-| 05 | []() | [15650. N과 M （2）](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/15650.%E2%80%85N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%882%EF%BC%89/N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%882%EF%BC%89.js) | [2493. 탑](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/2493.%E2%80%85%E1%84%90%E1%85%A1%E1%86%B8/%E1%84%90%E1%85%A1%E1%86%B8.js) |
-| 06 | []() | [15652. N과 M （4）](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/15652.%E2%80%85N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%884%EF%BC%89/N%E1%84%80%E1%85%AA%E2%80%85M%E2%80%85%EF%BC%884%EF%BC%89.js) | [2580. 스도쿠](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/2580.%E2%80%85%E1%84%89%E1%85%B3%E1%84%83%E1%85%A9%E1%84%8F%E1%85%AE/%E1%84%89%E1%85%B3%E1%84%83%E1%85%A9%E1%84%8F%E1%85%AE.js) |
-| 07 | []() | [1926. 그림](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Silver/1926.%E2%80%85%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7/%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7.js) | [3980. 선발 명단](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/3980.%E2%80%85%E1%84%89%E1%85%A5%E1%86%AB%E1%84%87%E1%85%A1%E1%86%AF%E2%80%85%E1%84%86%E1%85%A7%E1%86%BC%E1%84%83%E1%85%A1%E1%86%AB/%E1%84%89%E1%85%A5%E1%86%AB%E1%84%87%E1%85%A1%E1%86%AF%E2%80%85%E1%84%86%E1%85%A7%E1%86%BC%E1%84%83%E1%85%A1%E1%86%AB.js) |
-| 08 | []() | []() | [5427. 불](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/5427.%E2%80%85%E1%84%87%E1%85%AE%E1%86%AF/%E1%84%87%E1%85%AE%E1%86%AF.js) |
-| 09 | []() | []() | [9935. 문자열 폭발](./%E1%84%87%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%86%AB/Gold/9935.%E2%80%85%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%A7%E1%86%AF%E2%80%85%E1%84%91%E1%85%A9%E1%86%A8%E1%84%87%E1%85%A1%E1%86%AF/%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%A7%E1%86%AF%E2%80%85%E1%84%91%E1%85%A9%E1%86%A8%E1%84%87%E1%85%A1%E1%86%AF.js) |
+## 백준
+### Platinum
+- [3015. 오아시스 재결합](https://github.com/SWARVY/Algorithm/tree/main/백준/Platinum/3015. 오아시스 재결합)
+  - Solutions:
+    - README.md
+    - 오아시스 재결합.js
+### Bronze
+- [10989. 수 정렬하기 3](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/10989. 수 정렬하기 3)
+  - Solutions:
+    - 수 정렬하기 3.c
+    - README.md
+- [13300. 방 배정](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/13300. 방 배정)
+  - Solutions:
+    - 방 배정.js
+    - README.md
+- [3009. 네 번째 점](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3009. 네 번째 점)
+  - Solutions:
+    - 네 번째 점.c
+    - README.md
+- [1712. 손익분기점](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/1712. 손익분기점)
+  - Solutions:
+    - README.md
+    - 손익분기점.c
+- [11653. 소인수분해](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/11653. 소인수분해)
+  - Solutions:
+    - README.md
+    - 소인수분해.c
+- [2557. Hello World](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/2557. Hello World)
+  - Solutions:
+    - README.md
+    - Hello World.js
+- [1085. 직사각형에서 탈출](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/1085. 직사각형에서 탈출)
+  - Solutions:
+    - 직사각형에서 탈출.c
+    - README.md
+- [4153. 직각삼각형](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/4153. 직각삼각형)
+  - Solutions:
+    - README.md
+    - 직각삼각형.c
+- [10757. 큰 수 A＋B](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/10757. 큰 수 A＋B)
+  - Solutions:
+    - 큰 수 A＋B.c
+    - README.md
+- [3053. 택시 기하학](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3053. 택시 기하학)
+  - Solutions:
+    - README.md
+    - 택시 기하학.c
+- [2798. 블랙잭](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/2798. 블랙잭)
+  - Solutions:
+    - 블랙잭.c
+    - README.md
+- [2231. 분해합](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/2231. 분해합)
+  - Solutions:
+    - 분해합.c
+    - README.md
+### Silver
+- [2559. 수열](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2559. 수열)
+  - Solutions:
+    - 수열.js
+    - README.md
+- [1018. 체스판 다시 칠하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1018. 체스판 다시 칠하기)
+  - Solutions:
+    - README.md
+    - 체스판 다시 칠하기.c
+- [1932. 정수 삼각형](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1932. 정수 삼각형)
+  - Solutions:
+    - 정수 삼각형.js
+    - README.md
+- [15665. N과 M （11）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15665. N과 M （11）)
+  - Solutions:
+    - README.md
+    - N과 M （11）.js
+- [11650. 좌표 정렬하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11650. 좌표 정렬하기)
+  - Solutions:
+    - 좌표 정렬하기.js
+    - README.md
+    - 좌표 정렬하기.c
+- [2581. 소수](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2581. 소수)
+  - Solutions:
+    - README.md
+    - 소수.c
+- [1764. 듣보잡](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1764. 듣보잡)
+  - Solutions:
+    - README.md
+    - 듣보잡.js
+- [12852. 1로 만들기 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/12852. 1로 만들기 2)
+  - Solutions:
+    - README.md
+    - 1로 만들기 2.js
+- [1931. 회의실 배정](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1931. 회의실 배정)
+  - Solutions:
+    - 회의실 배정.js
+    - README.md
+- [1697. 숨바꼭질](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1697. 숨바꼭질)
+  - Solutions:
+    - README.md
+    - 숨바꼭질.js
+- [15657. N과 M （8）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15657. N과 M （8）)
+  - Solutions:
+    - N과 M （8）.js
+    - README.md
+- [17478. 재귀함수가 뭔가요？](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/17478. 재귀함수가 뭔가요？)
+  - Solutions:
+    - 재귀함수가 뭔가요？.js
+    - README.md
+- [1193. 분수찾기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1193. 분수찾기)
+  - Solutions:
+    - 분수찾기.c
+    - README.md
+- [2606. 바이러스](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2606. 바이러스)
+  - Solutions:
+    - 바이러스.js
+    - README.md
+- [1926. 그림](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1926. 그림)
+  - Solutions:
+    - 그림.js
+    - README.md
+- [10845. 큐](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10845. 큐)
+  - Solutions:
+    - 큐.js
+    - README.md
+- [2164. 카드2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2164. 카드2)
+  - Solutions:
+    - 카드2.js
+    - README.md
+- [15655. N과 M （6）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15655. N과 M （6）)
+  - Solutions:
+    - N과 M （6）.js
+    - README.md
+- [9465. 스티커](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9465. 스티커)
+  - Solutions:
+    - 스티커.js
+    - README.md
+- [15651. N과 M （3）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15651. N과 M （3）)
+  - Solutions:
+    - N과 M （3）.js
+    - README.md
+- [11726. 2×n 타일링](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11726. 2×n 타일링)
+  - Solutions:
+    - README.md
+    - 2×n 타일링.js
+- [9012. 괄호](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9012. 괄호)
+  - Solutions:
+    - README.md
+    - 괄호.js
+- [1074. Z](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1074. Z)
+  - Solutions:
+    - Z.js
+    - README.md
+- [1629. 곱셈](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1629. 곱셈)
+  - Solutions:
+    - README.md
+    - 곱셈.js
+- [19583. 싸이버개강총회](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/19583. 싸이버개강총회)
+  - Solutions:
+    - 싸이버개강총회.js
+    - README.md
+- [10815. 숫자 카드](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10815. 숫자 카드)
+  - Solutions:
+    - 숫자 카드.js
+    - README.md
+- [7568. 덩치](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/7568. 덩치)
+  - Solutions:
+    - 덩치.c
+    - README.md
+- [11399. ATM](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11399. ATM)
+  - Solutions:
+    - ATM.js
+    - README.md
+- [11725. 트리의 부모 찾기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11725. 트리의 부모 찾기)
+  - Solutions:
+    - 트리의 부모 찾기.js
+    - README.md
+- [1620. 나는야 포켓몬 마스터 이다솜](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1620. 나는야 포켓몬 마스터 이다솜)
+  - Solutions:
+    - README.md
+    - 나는야 포켓몬 마스터 이다솜.js
+- [11047. 동전 0](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11047. 동전 0)
+  - Solutions:
+    - 동전 0.js
+    - README.md
+- [15656. N과 M （7）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15656. N과 M （7）)
+  - Solutions:
+    - N과 M （7）.js
+    - README.md
+- [1003. 피보나치 함수](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1003. 피보나치 함수)
+  - Solutions:
+    - 피보나치 함수.js
+    - README.md
+- [18870. 좌표 압축](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/18870. 좌표 압축)
+  - Solutions:
+    - 좌표 압축.c
+    - README.md
+- [10816. 숫자 카드 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10816. 숫자 카드 2)
+  - Solutions:
+    - 숫자 카드 2.js
+    - README.md
+- [1929. 소수 구하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1929. 소수 구하기)
+  - Solutions:
+    - 소수 구하기.c
+    - README.md
+- [11727. 2×n 타일링 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11727. 2×n 타일링 2)
+  - Solutions:
+    - README.md
+    - 2×n 타일링 2.js
+- [16953. A → B](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/16953. A → B)
+  - Solutions:
+    - A → B.js
+    - README.md
+- [18115. 카드 놓기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/18115. 카드 놓기)
+  - Solutions:
+    - 카드 놓기.js
+    - README.md
+- [15663. N과 M （9）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15663. N과 M （9）)
+  - Solutions:
+    - N과 M （9）.js
+    - README.md
+- [2579. 계단 오르기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2579. 계단 오르기)
+  - Solutions:
+    - README.md
+    - 계단 오르기.js
+- [1149. RGB거리](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1149. RGB거리)
+  - Solutions:
+    - RGB거리.js
+    - README.md
+- [11651. 좌표 정렬하기 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11651. 좌표 정렬하기 2)
+  - Solutions:
+    - 좌표 정렬하기 2.js
+    - README.md
+- [10828. 스택](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10828. 스택)
+  - Solutions:
+    - 스택.js
+    - README.md
+- [11053. 가장 긴 증가하는 부분 수열](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11053. 가장 긴 증가하는 부분 수열)
+  - Solutions:
+    - 가장 긴 증가하는 부분 수열.js
+    - README.md
+- [1920. 수 찾기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1920. 수 찾기)
+  - Solutions:
+    - README.md
+    - 수 찾기.js
+- [2839. 설탕 배달](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2839. 설탕 배달)
+  - Solutions:
+    - 설탕 배달.c
+    - README.md
+- [11279. 최대 힙](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11279. 최대 힙)
+  - Solutions:
+    - 최대 힙.js
+    - README.md
+- [9095. 1， 2， 3 더하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9095. 1， 2， 3 더하기)
+  - Solutions:
+    - 1， 2， 3 더하기.js
+    - README.md
+- [11656. 접미사 배열](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11656. 접미사 배열)
+  - Solutions:
+    - 접미사 배열.js
+    - README.md
+- [18258. 큐 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/18258. 큐 2)
+  - Solutions:
+    - 큐 2.js
+    - README.md
+- [11724. 연결 요소의 개수](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11724. 연결 요소의 개수)
+  - Solutions:
+    - 연결 요소의 개수.js
+    - README.md
+- [15649. N과 M （1）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15649. N과 M （1）)
+  - Solutions:
+    - N과 M （1）.js
+    - README.md
+- [2751. 수 정렬하기 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2751. 수 정렬하기 2)
+  - Solutions:
+    - 수 정렬하기 2.c
+    - README.md
+- [10773. 제로](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10773. 제로)
+  - Solutions:
+    - 제로.js
+    - README.md
+- [15664. N과 M （10）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15664. N과 M （10）)
+  - Solutions:
+    - README.md
+    - N과 M （10）.js
+- [1181. 단어 정렬](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1181. 단어 정렬)
+  - Solutions:
+    - 단어 정렬.c
+    - README.md
+- [1978. 소수 찾기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1978. 소수 찾기)
+  - Solutions:
+    - README.md
+    - 소수 찾기.c
+- [15652. N과 M （4）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15652. N과 M （4）)
+  - Solutions:
+    - N과 M （4）.js
+    - README.md
+- [1026. 보물](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1026. 보물)
+  - Solutions:
+    - 보물.js
+    - README.md
+- [18917. 수열과 쿼리 38](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/18917. 수열과 쿼리 38)
+  - Solutions:
+    - 수열과 쿼리 38.js
+    - README.md
+- [2531. 회전 초밥](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2531. 회전 초밥)
+  - Solutions:
+    - 회전 초밥.js
+    - README.md
+- [11659. 구간 합 구하기 4](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/11659. 구간 합 구하기 4)
+  - Solutions:
+    - 구간 합 구하기 4.js
+    - README.md
+- [2003. 수들의 합 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2003. 수들의 합 2)
+  - Solutions:
+    - README.md
+    - 수들의 합 2.js
+- [1780. 종이의 개수](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1780. 종이의 개수)
+  - Solutions:
+    - 종이의 개수.js
+    - README.md
+- [1436. 영화감독 숌](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1436. 영화감독 숌)
+  - Solutions:
+    - README.md
+    - 영화감독 숌.c
+- [15666. N과 M （12）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15666. N과 M （12）)
+  - Solutions:
+    - N과 M （12）.js
+    - README.md
+- [15650. N과 M （2）](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/15650. N과 M （2）)
+  - Solutions:
+    - N과 M （2）.js
+    - README.md
+- [1927. 최소 힙](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1927. 최소 힙)
+  - Solutions:
+    - 최소 힙.js
+    - README.md
+- [10866. 덱](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/10866. 덱)
+  - Solutions:
+    - 덱.js
+    - README.md
+- [1427. 소트인사이드](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1427. 소트인사이드)
+  - Solutions:
+    - README.md
+    - 소트인사이드.c
+- [1260. DFS와 BFS](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1260. DFS와 BFS)
+  - Solutions:
+    - README.md
+    - DFS와 BFS.js
+- [2108. 통계학](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/2108. 통계학)
+  - Solutions:
+    - 통계학.c
+    - README.md
+- [1002. 터렛](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1002. 터렛)
+  - Solutions:
+    - 터렛.c
+    - README.md
+- [9020. 골드바흐의 추측](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9020. 골드바흐의 추측)
+  - Solutions:
+    - 골드바흐의 추측.c
+    - README.md
+### Gold
+- [13913. 숨바꼭질 4](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/13913. 숨바꼭질 4)
+  - Solutions:
+    - 숨바꼭질 4.js
+    - README.md
+- [1600. 말이 되고픈 원숭이](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1600. 말이 되고픈 원숭이)
+  - Solutions:
+    - 말이 되고픈 원숭이.js
+    - README.md
+- [22115. 창영이와 커피](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/22115. 창영이와 커피)
+  - Solutions:
+    - 창영이와 커피.js
+    - README.md
+- [2294. 동전 2](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2294. 동전 2)
+  - Solutions:
+    - 동전 2.js
+    - README.md
+- [1941. 소문난 칠공주](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1941. 소문난 칠공주)
+  - Solutions:
+    - 소문난 칠공주.js
+    - README.md
+- [17845. 수강 과목](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/17845. 수강 과목)
+  - Solutions:
+    - README.md
+    - 수강 과목.js
+- [14502. 연구소](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/14502. 연구소)
+  - Solutions:
+    - README.md
+    - 연구소.js
+- [2580. 스도쿠](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2580. 스도쿠)
+  - Solutions:
+    - 스도쿠.js
+    - README.md
+- [5427. 불](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/5427. 불)
+  - Solutions:
+    - 불.js
+    - README.md
+- [9084. 동전](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9084. 동전)
+  - Solutions:
+    - README.md
+    - 동전.js
+- [1644. 소수의 연속합](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1644. 소수의 연속합)
+  - Solutions:
+    - 소수의 연속합.js
+    - README.md
+- [10026. 적록색약](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/10026. 적록색약)
+  - Solutions:
+    - 적록색약.js
+    - README.md
+- [5430. AC](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/5430. AC)
+  - Solutions:
+    - AC.js
+    - README.md
+- [11729. 하노이 탑 이동 순서](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/11729. 하노이 탑 이동 순서)
+  - Solutions:
+    - 하노이 탑 이동 순서.js
+    - README.md
+- [27172. 수 나누기 게임](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/27172. 수 나누기 게임)
+  - Solutions:
+    - README.md
+    - 수 나누기 게임.js
+- [2252. 줄 세우기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2252. 줄 세우기)
+  - Solutions:
+    - 줄 세우기.js
+    - README.md
+- [15961. 회전 초밥](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/15961. 회전 초밥)
+  - Solutions:
+    - 회전 초밥.js
+    - README.md
+- [2573. 빙산](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2573. 빙산)
+  - Solutions:
+    - 빙산.js
+    - README.md
+- [2206. 벽 부수고 이동하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2206. 벽 부수고 이동하기)
+  - Solutions:
+    - README.md
+    - 벽 부수고 이동하기.js
+- [2457. 공주님의 정원](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2457. 공주님의 정원)
+  - Solutions:
+    - 공주님의 정원.js
+    - README.md
+- [6198. 옥상 정원 꾸미기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/6198. 옥상 정원 꾸미기)
+  - Solutions:
+    - README.md
+    - 옥상 정원 꾸미기.js
+- [12865. 평범한 배낭](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/12865. 평범한 배낭)
+  - Solutions:
+    - 평범한 배낭.js
+    - README.md
+- [9251. LCS](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9251. LCS)
+  - Solutions:
+    - README.md
+    - LCS.js
+- [10986. 나머지 합](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/10986. 나머지 합)
+  - Solutions:
+    - README.md
+    - 나머지 합.js
+- [3980. 선발 명단](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/3980. 선발 명단)
+  - Solutions:
+    - 선발 명단.js
+    - README.md
+- [2295. 세 수의 합](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2295. 세 수의 합)
+  - Solutions:
+    - 세 수의 합.js
+    - README.md
+- [14728. 벼락치기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/14728. 벼락치기)
+  - Solutions:
+    - README.md
+    - 벼락치기.js
+- [2493. 탑](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2493. 탑)
+  - Solutions:
+    - README.md
+    - 탑.js
+- [1011. Fly me to the Alpha Centauri](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1011. Fly me to the Alpha Centauri)
+  - Solutions:
+    - Fly me to the Alpha Centauri.c
+    - README.md
+- [2504. 괄호의 값](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2504. 괄호의 값)
+  - Solutions:
+    - README.md
+    - 괄호의 값.js
+- [9935. 문자열 폭발](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9935. 문자열 폭발)
+  - Solutions:
+    - README.md
+    - 문자열 폭발.js
+- [3078. 좋은 친구](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/3078. 좋은 친구)
+  - Solutions:
+    - README.md
+    - 좋은 친구.js
+- [13549. 숨바꼭질 3](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/13549. 숨바꼭질 3)
+  - Solutions:
+    - 숨바꼭질 3.js
+    - README.md
+- [1700. 멀티탭 스케줄링](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1700. 멀티탭 스케줄링)
+  - Solutions:
+    - README.md
+    - 멀티탭 스케줄링.js
+- [2170. 선 긋기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2170. 선 긋기)
+  - Solutions:
+    - 선 긋기.js
+    - README.md
+- [7576. 토마토](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/7576. 토마토)
+  - Solutions:
+    - 토마토.js
+    - README.md
+- [9663. N－Queen](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9663. N－Queen)
+  - Solutions:
+    - N－Queen.js
+    - README.md
+- [13422. 도둑](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/13422. 도둑)
+  - Solutions:
+    - 도둑.js
+    - README.md
+- [1915. 가장 큰 정사각형](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1915. 가장 큰 정사각형)
+  - Solutions:
+    - README.md
+    - 가장 큰 정사각형.js
+- [21758. 꿀 따기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/21758. 꿀 따기)
+  - Solutions:
+    - 꿀 따기.js
+    - README.md
+- [2617. 구슬 찾기](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/2617. 구슬 찾기)
+  - Solutions:
+    - 구슬 찾기.js
+    - README.md
+- [6137. 문자열 생성](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/6137. 문자열 생성)
+  - Solutions:
+    - 문자열 생성.js
+    - README.md
+- [17298. 오큰수](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/17298. 오큰수)
+  - Solutions:
+    - README.md
+    - 오큰수.js
+- [1918. 후위 표기식](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/1918. 후위 표기식)
+  - Solutions:
+    - README.md
+    - 후위 표기식.js
