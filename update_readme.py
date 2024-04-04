@@ -1,28 +1,55 @@
+#!/usr/bin/env python
+
 import os
-from pathlib import Path
+from urllib import parse
 
-def generate_readme_content(root_dir):
-    content = []
-    for platform in root_dir.iterdir():
-        if platform.is_dir():
-            platform_name = platform.name
-            content.append(f"## {platform_name}\n")
-            for level in platform.iterdir():
-                if level.is_dir():
-                    level_name = level.name
-                    content.append(f"### {level_name}\n")
-                    for problem_dir in level.iterdir():
-                        if problem_dir.is_dir():
-                            problem_name = problem_dir.name
-                            problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/{platform_name}/{level_name}/{problem_name}"
-                            content.append(f"- [{problem_name}]({problem_url})\n")
-    return "".join(content)
+HEADER="""#
+# 백준, 프로그래머스 문제 풀이 목록
+"""
 
-def update_readme(root_dir):
-    readme_path = root_dir / "README.md"
-    new_content = generate_readme_content(root_dir)
-    readme_path.write_text(new_content)
-
+def main():
+  content = ""
+  content += HEADER
+  
+  directories = []
+  solveds = []
+  
+  for root, dirs, files in os.walk("."):
+    dirs.sort()
+    if root == '.':
+      for dir in ('.git', '.github'):
+        try:
+          dirs.remove(dir)
+        except ValueError:
+          pass
+      continue
+    
+    category = os.path.basename(root)
+    
+    if category == 'images':
+      continue
+      
+    directory = os.path.basename(os.path.dirname(root))
+    
+    if directory == '.':
+      continue
+      
+    if directory not in directories:
+      if directory in ["백준", "프로그래머스"]:
+        content += "## 📚 {}\n".format(directory)
+      else:
+        content += "### 🚀 {}\n".format(directory)
+        content += "| 문제번호 | 링크 |\n"
+        content += "| ----- | ----- |\n"
+      directories.append(directory)
+      
+    for file in files:
+      if category not in solveds:
+        content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+        solveds.append(category)
+        
+  with open("README.md", "w") as fd:
+    fd.write(content)
+    
 if __name__ == "__main__":
-    root_dir = Path(__file__).parent
-    update_readme(root_dir)
+  main()
