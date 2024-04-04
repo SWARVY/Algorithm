@@ -2,7 +2,7 @@
 ## 📝 Solved Algorithm Problems by Backjoon Online Judge
 	- This repo is automatically managed using python & Github Action.
 
-| Num | Bronze | Silver | Gold |
+<br/>| Num | Bronze | Silver | Gold |
 | :-: | :-: | :-: | :-: |
 | 01 | [10757. 큰 수 A＋B](./%EB%B0%B1%EC%A4%80/Bronze/10757.%E2%80%85%ED%81%B0%E2%80%85%EC%88%98%E2%80%85A%EF%BC%8BB/%ED%81%B0%E2%80%85%EC%88%98%E2%80%85A%EF%BC%8BB.c) | [1002. 터렛](./%EB%B0%B1%EC%A4%80/Silver/1002.%E2%80%85%ED%84%B0%EB%A0%9B/%ED%84%B0%EB%A0%9B.c) | [10026. 적록색약](./%EB%B0%B1%EC%A4%80/Gold/10026.%E2%80%85%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD/%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD.js) |
 | 02 | [1085. 직사각형에서 탈출](./%EB%B0%B1%EC%A4%80/Bronze/1085.%E2%80%85%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%EC%97%90%EC%84%9C%E2%80%85%ED%83%88%EC%B6%9C/%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%EC%97%90%EC%84%9C%E2%80%85%ED%83%88%EC%B6%9C.c) | [1003. 피보나치 함수](./%EB%B0%B1%EC%A4%80/Silver/1003.%E2%80%85%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%E2%80%85%ED%95%A8%EC%88%98/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%E2%80%85%ED%95%A8%EC%88%98.js) | [1011. Fly me to the Alpha Centauri](./%EB%B0%B1%EC%A4%80/Gold/1011.%E2%80%85Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri/Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri.c) |
@@ -80,6 +80,6 @@
 | 74 | - | [9020. 골드바흐의 추측](./%EB%B0%B1%EC%A4%80/Silver/9020.%E2%80%85%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%E2%80%85%EC%B6%94%EC%B8%A1/%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%E2%80%85%EC%B6%94%EC%B8%A1.c) | - |
 | 75 | - | [9095. 1， 2， 3 더하기](./%EB%B0%B1%EC%A4%80/Silver/9095.%E2%80%851%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0/1%EF%BC%8C%E2%80%852%EF%BC%8C%E2%80%853%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0.js) | - |
 | 76 | - | [9465. 스티커](./%EB%B0%B1%EC%A4%80/Silver/9465.%E2%80%85%EC%8A%A4%ED%8B%B0%EC%BB%A4/%EC%8A%A4%ED%8B%B0%EC%BB%A4.js) | - |
-| Num | Platinum | Diamond | Ruby |
+<br/>| Num | Platinum | Diamond | Ruby |
 | :-: | :-: | :-: | :-: |
 | 01 | [3015. 오아시스 재결합](./%EB%B0%B1%EC%A4%80/Platinum/3015.%E2%80%85%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4%E2%80%85%EC%9E%AC%EA%B2%B0%ED%95%A9/%EC%98%A4%EC%95%84%EC%8B%9C%EC%8A%A4%E2%80%85%EC%9E%AC%EA%B2%B0%ED%95%A9.js) | - | - |
