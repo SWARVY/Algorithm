@@ -1,64 +1,89 @@
 import os
-from pathlib import Path
-import re
+from urllib.parse import quote
 
-def extract_number(text):
-    """문제 디렉토리 이름에서 숫자를 추출합니다."""
-    match = re.search(r'\d+', text)
-    return int(match.group()) if match else 0
+HEADER = """#
+"""
 
-def generate_problems_section(platform_dir, levels, icons_base_url):
-    """문제 섹션을 생성합니다."""
-    content = ["<tr>"]
-    for level_name in levels:
-        level_dir = platform_dir / level_name
-        content.append(f"<td align='center' valign='top'><strong>{level_name}</strong><br/>")
-        if level_dir.exists():
-            problem_dirs = sorted(level_dir.iterdir(), key=lambda x: extract_number(x.stem))
-            for problem_dir in problem_dirs:
-                if problem_dir.is_dir():
-                    problem_name = ' '.join(problem_dir.name.split()[1:])  # 문제 이름
-                    problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/백준/{level_name}/{problem_dir.name}"
-                    content.append(f"<a href='{problem_url}/README.md'>{problem_dir.name}</a><br/>")
-        else:
-            content.append("-")
-        content.append("</td>")
-    content.append("</tr>")
-    return "".join(content)
+def main():
+    content = ""
+    content += HEADER
 
-def generate_solution_icons(solution_files, problem_url, icons_base_url):
-    """풀이 파일들에 대한 언어별 아이콘 링크를 생성합니다."""
-    extension_to_icon = {
-        ".c": "c.svg",
-        ".js": "js.svg",  # 파일명 확인 필요
+    # Platinum, Diamond, Ruby 카테고리 추가
+    categories = {
+        'Bronze': {'nums': [], 'links': []},
+        'Silver': {'nums': [], 'links': []},
+        'Gold': {'nums': [], 'links': []},
+        'Platinum': {'nums': [], 'links': []},
+        'Diamond': {'nums': [], 'links': []},
+        'Ruby': {'nums': [], 'links': []},
     }
-    solution_icons = []
-    for f in solution_files:
-        icon_filename = extension_to_icon.get(f.suffix, None)  # 확장자에 해당하는 아이콘 파일 이름을 가져옵니다.
-        if icon_filename:  # 해당하는 아이콘 파일 이름이 있는 경우에만 링크 생성
-            icon_url = f"{icons_base_url}/{icon_filename}"
-            solution_icon = f"<a href='{problem_url}/{f.name}' title='{f.suffix[1:]}'><img src='{icon_url}' alt='{f.suffix[1:]}' style='width: 20px; height: 20px;'/></a>"
-            solution_icons.append(solution_icon)
-    return ' '.join(solution_icons)
 
-def generate_readme_content(root_dir):
-    content = ["<table border='1' align='center'>"]
-    icons_base_url = "https://github.com/SWARVY/Algorithm/raw/main/icons"
-    platform_dir = root_dir / "백준"
+    for root, dirs, files in os.walk("."):
+        dirs.sort()
+        if root == '.':
+            for dir in ('.git', '.github'):
+                try:
+                    dirs.remove(dir)
+                except ValueError:
+                    pass
+            continue
 
-    # 브론즈, 실버, 골드 문제 섹션
-    content.append(generate_problems_section(platform_dir, ["Bronze", "Silver", "Gold"], icons_base_url))
-    # 플래티넘, 다이아몬드, 루비 문제 섹션
-    content.append(generate_problems_section(platform_dir, ["Platinum", "Diamond", "Ruby"], icons_base_url))
+        category = os.path.basename(root)
 
-    content.append("</table>")
-    return "".join(content)
+        if category in ['images', 'icons']:  # icons 폴더도 무시
+            continue
 
-def update_readme(root_dir):
-    readme_path = root_dir / "README.md"
-    new_content = generate_readme_content(root_dir)
-    readme_path.write_text(new_content)
+        directory = os.path.basename(os.path.dirname(root))
+
+        if directory == '.':
+            continue
+
+        if directory not in categories:
+            continue
+
+        for file in files:
+            file_ext = os.path.splitext(file)[1]
+            if file_ext in [".cc", ".c", ".java", ".js"]:  # '.js' 추가
+                problem_num = category.split('_')[-1]
+                link = quote(os.path.join(root, file))
+                categories[directory]['nums'].append(problem_num)
+                categories[directory]['links'].append(link)
+
+    # Platinum, Diamond, Ruby 카운트 추가
+    bronze_count = len(categories['Bronze']['nums'])
+    silver_count = len(categories['Silver']['nums'])
+    gold_count = len(categories['Gold']['nums'])
+    platinum_count = len(categories['Platinum']['nums'])
+    diamond_count = len(categories['Diamond']['nums'])
+    ruby_count = len(categories['Ruby']['nums'])
+
+    # 총합과 최대 카운트 갱신
+    sum_count = bronze_count + silver_count + gold_count + platinum_count + diamond_count + ruby_count
+    max_count = max(bronze_count, silver_count, gold_count, platinum_count, diamond_count, ruby_count)
+
+    content += "## 📝 Solved Algorithm Problems by Backjoon Online Judge\n"
+    content += "\t- This repo is automatically managed using python & Github Action.\n"
+    content += "\t- This repo contains solved algorithm files written from {} sources.\n\n".format(sum_count)
+    
+    # 테이블 헤더에 Platinum, Diamond, Ruby 추가
+    content += "| Num | 🟤&nbsp;Bronze&nbsp;(Solved : {}) | ⚪&nbsp;Silver&nbsp;(Solved : {}) | 🟡&nbsp;Gold&nbsp;(Solved : {}) | 🟢&nbsp;Platinum&nbsp;(Solved : {}) | 🔵&nbsp;Diamond&nbsp;(Solved : {}) | 🔴&nbsp;Ruby&nbsp;(Solved : {}) |\n".format(
+        bronze_count, silver_count, gold_count, platinum_count, diamond_count, ruby_count
+    )
+    content += "| :-: | :-------------: | :------------: | :----------: | :----------: | :----------: | :----------: |\n"
+
+    # 각 테이블 행을 생성
+    for i in range(max_count):
+        row_cells = [str(i + 1).zfill(2)]  # 테이블 행 시작에 번호 추가
+        for category in categories:
+            num = categories[category]['nums'][i] if i < len(categories[category]['nums']) else ''
+            link = categories[category]['links'][i] if i < len(categories[category]['links']) else ''
+            cell = "[{}]({})".format(num, link) if num and link else '-'
+            row_cells.append(cell)
+        content += "| " + " | ".join(row_cells) + " |\n"
+
+    with open("README.md", "w") as fd:
+        fd.write(content)
+
 
 if __name__ == "__main__":
-    root_dir = Path(__file__).parent
-    update_readme(root_dir)
+    main()
