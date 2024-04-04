@@ -2,7 +2,7 @@
 
 ## 사용한 프로그래밍 언어
 
-<table align='center'><tr><td align='center'><img src='https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg' alt='C' title='C' style='width: 30px; height: 30px;'/></td><td align='center'><img src='https://github.com/SWARVY/Algorithm/raw/main/icons/javascript_correct.svg' alt='JavaScript' title='JavaScript' style='width: 30px; height: 30px;'/></td></tr></table>
+<table align='center'><tr><td align='center'><img src='https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg' alt='C' title='C' style='width: 30px; height: 30px;'/></td><td align='center'><img src='https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg' alt='JavaScript' title='JavaScript' style='width: 30px; height: 30px;'/></td></tr></table>
 
 ## 백준
 
