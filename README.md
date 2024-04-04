@@ -1,5 +1,5 @@
 ## 백준
-### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_bronze.png' width='25' height='25'> Bronze
+### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_bronze.png' width='25' height='25' align='middle'> Bronze
 | 문제 | 문제 설명 | 풀이 |
 | --- | --- | --- |
 | [10757. 큰 수 A＋B](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/10757. 큰 수 A＋B) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/10757. 큰 수 A＋B/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/10757. 큰 수 A＋B) |
@@ -14,7 +14,7 @@
 | [3009. 네 번째 점](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3009. 네 번째 점) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3009. 네 번째 점/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3009. 네 번째 점) |
 | [3053. 택시 기하학](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3053. 택시 기하학) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3053. 택시 기하학/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/3053. 택시 기하학) |
 | [4153. 직각삼각형](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/4153. 직각삼각형) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/4153. 직각삼각형/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Bronze/4153. 직각삼각형) |
-### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_silver.png' width='25' height='25'> Silver
+### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_silver.png' width='25' height='25' align='middle'> Silver
 | 문제 | 문제 설명 | 풀이 |
 | --- | --- | --- |
 | [1002. 터렛](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1002. 터렛) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1002. 터렛/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/1002. 터렛) |
@@ -92,7 +92,7 @@
 | [9020. 골드바흐의 추측](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9020. 골드바흐의 추측) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9020. 골드바흐의 추측/README.md) | [![.c](https://github.com/SWARVY/Algorithm/raw/main/icons/c.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9020. 골드바흐의 추측) |
 | [9095. 1， 2， 3 더하기](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9095. 1， 2， 3 더하기) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9095. 1， 2， 3 더하기/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9095. 1， 2， 3 더하기) |
 | [9465. 스티커](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9465. 스티커) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9465. 스티커/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Silver/9465. 스티커) |
-### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_gold.png' width='25' height='25'> Gold
+### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_gold.png' width='25' height='25' align='middle'> Gold
 | 문제 | 문제 설명 | 풀이 |
 | --- | --- | --- |
 | [10026. 적록색약](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/10026. 적록색약) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/10026. 적록색약/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/10026. 적록색약) |
@@ -139,7 +139,7 @@
 | [9251. LCS](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9251. LCS) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9251. LCS/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9251. LCS) |
 | [9663. N－Queen](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9663. N－Queen) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9663. N－Queen/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9663. N－Queen) |
 | [9935. 문자열 폭발](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9935. 문자열 폭발) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9935. 문자열 폭발/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Gold/9935. 문자열 폭발) |
-### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_platinum.png' width='25' height='25'> Platinum
+### <img src='https://github.com/SWARVY/Algorithm/raw/main/icons/tier_platinum.png' width='25' height='25' align='middle'> Platinum
 | 문제 | 문제 설명 | 풀이 |
 | --- | --- | --- |
 | [3015. 오아시스 재결합](https://github.com/SWARVY/Algorithm/tree/main/백준/Platinum/3015. 오아시스 재결합) | [문제 설명](https://github.com/SWARVY/Algorithm/tree/main/백준/Platinum/3015. 오아시스 재결합/README.md) | [![.js](https://github.com/SWARVY/Algorithm/raw/main/icons/javascript.svg)](https://github.com/SWARVY/Algorithm/tree/main/백준/Platinum/3015. 오아시스 재결합) |
