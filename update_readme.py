@@ -11,7 +11,7 @@ def generate_language_icons_table(icons_base_url):
     """사용한 프로그래밍 언어의 아이콘만 포함된 테이블을 생성합니다."""
     languages = {
         "C": "c.svg",
-        "JavaScript": "javascript_correct.svg",  # 올바른 파일명으로 변경
+        "JavaScript": "javascript.svg",  # 올바른 파일명으로 변경
     }
     table_content = ["<table align='center'><tr>"]
     for lang, icon_filename in languages.items():
