@@ -17,17 +17,16 @@ def generate_readme_content(root_dir):
                         if problem_dir.is_dir():
                             problem_name = problem_dir.name
                             problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/{platform_name}/{level_name}/{problem_name}"
-                            solution_files = [f.name for f in problem_dir.iterdir() if f.is_file()]
+                            # README.md 파일을 제외한 풀이 파일 목록 생성
+                            solution_files = [f.name for f in problem_dir.iterdir() if f.is_file() and f.name != "README.md"]
                             solution_links = [f"[{solution_file}]({problem_url}/{solution_file})" for solution_file in solution_files]
                             
-                            # README.md 파일에서 문제 설명 추출
+                            # 문제 설명 대신 README.md 파일로의 링크를 제공
                             readme_path = problem_dir / "README.md"
-                            if readme_path.exists():
-                                problem_description = readme_path.read_text().split("\n")[0]
-                            else:
-                                problem_description = ""
+                            readme_url = f"{problem_url}/README.md"
+                            problem_description_link = f"[문제 설명]({readme_url})" if readme_path.exists() else "설명 없음"
                             
-                            content.append(f"| [{problem_name}]({problem_url}) | {problem_description} | {', '.join(solution_links)} |\n")
+                            content.append(f"| [{problem_name}]({problem_url}) | {problem_description_link} | {', '.join(solution_links)} |\n")
 
     return "".join(content)
 
