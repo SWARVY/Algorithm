@@ -11,7 +11,7 @@ def generate_language_icons_table(icons_base_url):
     """사용한 프로그래밍 언어의 아이콘만 포함된 테이블을 생성합니다."""
     languages = {
         "C": "c.svg",
-        "JavaScript": "javascript.svg",  # 파일명과 경로를 정확히 확인해주세요.
+        "JavaScript": "javascript_correct.svg",  # 올바른 파일명으로 변경
     }
     table_content = ["<table align='center'><tr>"]
     for lang, icon_filename in languages.items():
@@ -37,16 +37,17 @@ def generate_readme_content(root_dir):
             level_dir = platform_dir / level_name
             if level_dir.exists():
                 tier_image_url = f"{icons_base_url}/tier_{level_name.lower()}.png"
-                content.append(f"### <img src='{tier_image_url}' alt='{level_name}' style='vertical-align: middle; width: 40px; height: 40px;'/> {level_name}\n")
-                content.append("| 문제 번호 | 풀이 |\n|:---------:|:----:|\n")
+                content.append(f"### <img src='{tier_image_url}' alt='{level_name}' style='vertical-align: middle; width: 40px; height: auto;'/> {level_name}\n")
+                content.append("| 문제 이름 | 풀이 |\n|---|---|\n")
                 problem_dirs = sorted(level_dir.iterdir(), key=lambda x: extract_number(x.stem))
                 for problem_dir in problem_dirs:
                     if problem_dir.is_dir():
-                        problem_name = problem_dir.stem
+                        # 문제 이름 추출
+                        problem_name = ' '.join(problem_dir.name.split()[1:])  # 첫 번째 요소(문제 번호)를 제외한 나머지를 문제 이름으로 사용
                         problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/백준/{level_name}/{problem_dir.name}"
                         solution_files = [f for f in problem_dir.iterdir() if f.is_file() and f.name != "README.md"]
                         solution_links = ' '.join([f"<a href='{problem_url}/{f.name}' title='{f.suffix[1:]}'><img src='{icons_base_url}/{f.suffix[1:]}.svg' alt='{f.suffix[1:]}' style='width: 20px; height: 20px;'/></a>" for f in solution_files])
-                        content.append(f"| [{problem_name}]({problem_url}/README.md) | {solution_links} |\n")
+                        content.append(f"| [{problem_dir.name}]({problem_url}/README.md) | {solution_links} |\n")
     content.append("\n</div>\n")
 
     return "".join(content)
