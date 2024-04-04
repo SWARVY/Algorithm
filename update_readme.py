@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 def language_icon_links(filenames, base_url):
-    """파일명 목록에 따라 프로그래밍 언어 아이콘의 링크 목록을 반환합니다."""
+    """파일명 목록에 따라 프로그래밍 언어 아이콘의 HTML 링크 목록을 반환합니다."""
     extension_to_icon = {
         ".c": "c.svg",
         ".js": "javascript.svg",
@@ -14,9 +14,9 @@ def language_icon_links(filenames, base_url):
         _, extension = os.path.splitext(filename)
         icon_filename = extension_to_icon.get(extension)
         if icon_filename:
-            # GitHub 저장소의 이미지 파일 URL을 생성합니다.
+            # GitHub 저장소의 이미지 파일 URL을 생성하고 HTML 이미지 태그로 반환합니다.
             icon_url = f"{base_url}/{icon_filename}"
-            links.append(f"![{extension}]({icon_url})")
+            links.append(f'<img src="{icon_url}" alt="{extension}" style="width:20px; height:20px;"/>')
     return ' '.join(links) if links else 'N/A'  # 아이콘 링크 목록 반환, 없으면 N/A
 
 def generate_readme_content(root_dir):
@@ -30,17 +30,17 @@ def generate_readme_content(root_dir):
             for level_name in levels:
                 level_dir = platform / level_name
                 if level_dir.is_dir():
-                    # 난이도별 티어 이미지 추가 및 크기 조정, 수직 중앙 정렬
+                    # 난이도별 티어 이미지 추가 및 크기 조정, 수직 중앙 정렬을 위한 HTML 사용
                     tier_image_url = f"{icons_base_url}/tier_{level_name.lower()}.png"
-                    content.append(f"### <img src='{tier_image_url}' width='25' height='25' align='middle'> {level_name}\n")
+                    content.append(f'### <img src="{tier_image_url}" alt="{level_name}" style="vertical-align: middle; width:25px; height:25px;"/> <span style="vertical-align: middle;">{level_name}</span>\n')
                     content.append("| 문제 | 문제 설명 | 풀이 |\n| --- | --- | --- |\n")
                     for problem_dir in sorted(level_dir.iterdir(), key=lambda x: x.name):
                         if problem_dir.is_dir():
                             problem_name = problem_dir.name
                             problem_url = f"https://github.com/SWARVY/Algorithm/tree/main/{platform_name}/{level_name}/{problem_name}"
                             solution_files = [f.name for f in problem_dir.iterdir() if f.is_file() and f.name != "README.md"]
-                            # 모든 아이콘 링크를 한 줄에 표시
-                            solution_links = f"[{language_icon_links(solution_files, icons_base_url)}]({problem_url})"
+                            # 모든 아이콘 링크를 HTML 이미지 태그로 한 줄에 표시
+                            solution_links = language_icon_links(solution_files, icons_base_url)
                             
                             readme_path = problem_dir / "README.md"
                             readme_url = f"{problem_url}/README.md"
