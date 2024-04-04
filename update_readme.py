@@ -43,9 +43,9 @@ def main():
     # README 내용 구성
     content += "## 📝 Solved Algorithm Problems by Backjoon Online Judge\n"
     content += "\t- This repo is automatically managed using python & Github Action.\n\n"
-    content += "<br/>"
+    content += "### 🟤 Bronze ⚪ Silver 🟡 Gold\n"
     content += generate_table(categories, ['Bronze', 'Silver', 'Gold'])
-    content += "<br/>"
+    content += "\n### 🟢 Platinum 🔵 Diamond 🔴 Ruby\n"
     content += generate_table(categories, ['Platinum', 'Diamond', 'Ruby'])
 
     # README 파일 작성
