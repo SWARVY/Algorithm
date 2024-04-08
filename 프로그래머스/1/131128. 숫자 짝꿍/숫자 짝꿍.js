@@ -1,18 +1,8 @@
 function solution(X, Y) {
     const arrX = X.split('').map(Number);
     const arrY = Y.split('').map(Number);
-    const mapX = new Map();
     const mapY = new Map();
     const answer = [];
-    
-    arrX.forEach((val) => {
-        if (mapX.has(val)) {
-            const curr = mapX.get(val);
-            mapX.set(val, curr + 1);
-        } else {
-            mapX.set(val, 1);
-        }
-    });
     
     arrY.forEach((val) => {
         if (mapY.has(val)) {
